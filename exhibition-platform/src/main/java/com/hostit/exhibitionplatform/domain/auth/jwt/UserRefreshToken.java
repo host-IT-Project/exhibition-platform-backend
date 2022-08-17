@@ -1,5 +1,6 @@
 package com.hostit.exhibitionplatform.domain.auth.jwt;
 
+import com.hostit.exhibitionplatform.global.config.audit.BaseTimeEntity;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
-public class UserRefreshToken {
+public class UserRefreshToken extends BaseTimeEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
